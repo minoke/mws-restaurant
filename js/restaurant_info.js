@@ -35,22 +35,6 @@ initMap = () => {
   });
 }
 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
-
 /**
  * Get current restaurant from page URL.
  */
@@ -148,20 +132,30 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+
+  const cardHeader = document.createElement('div');
+  cardHeader.classList.add('card-header');
+
   const name = document.createElement('p');
+  name.classList.add('reviews-author');
   name.innerHTML = review.name;
-  li.appendChild(name);
+  cardHeader.appendChild(name);
 
   const date = document.createElement('p');
+  date.classList.add('reviews-date')
   date.innerHTML = review.date;
-  li.appendChild(date);
+  cardHeader.appendChild(date);
+
+  li.appendChild(cardHeader);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.classList.add('reviews-rating');
   li.appendChild(rating);
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.classList.add('comments');
   li.appendChild(comments);
 
   return li;
