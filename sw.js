@@ -21,8 +21,8 @@ self.addEventListener('install', function(event) {
 });
 
 /**
- * @description intercept request, check if desired resource is chached.
- * If so, then return it from cache. If not get the resource from network
+ * @description intercept request, check if desired resource is cached.
+ * If so, then return it from cache otherwise get resource from network
  */
 self.addEventListener('fetch', function(event) {
   event.respondWith(
