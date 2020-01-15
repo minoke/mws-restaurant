@@ -149,7 +149,7 @@ createReviewHTML = (review) => {
 
   li.appendChild(cardHeader);
 
-  const rating = document.createElement('p');
+  const rating = document.createElement('h3');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.classList.add('reviews-rating');
   li.appendChild(rating);

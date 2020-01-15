@@ -344,6 +344,7 @@ nav h1 a {
   font-weight: bold;
   padding-left: 20px;
   line-height: 35px;
+  margin: 0 0 0 20px;
 }
 .comments {
   padding: 10px 0;
