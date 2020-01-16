@@ -93,12 +93,11 @@ nav#breadcrumb-navigation {
   height: 40px;
 }
 #breadcrumb {
-  padding: 10px 40px 16px;
   list-style: none;
   background-color: #eee;
   font-size: 17px;
   margin: 0;
-  /* width: calc(50% - 80px); */
+  text-align: left;
 }
 
 /* Display list items side by side */
@@ -250,7 +249,7 @@ nav#breadcrumb-navigation {
 #restaurant-name {
   color: #ffa500;
   font-family: Arial, sans-serif;
-  font-size: 20pt;
+  font-size: 18pt;
   font-weight: 200;
   letter-spacing: 0;
   margin: 15px 0 30px;
@@ -292,9 +291,9 @@ nav#breadcrumb-navigation {
 #reviews-container {
   padding: 30px 40px 80px;
 }
-#reviews-container h2 {
+#reviews-container h3 {
   color: #ffa500;
-  font-size: 24pt;
+  font-size: 20pt;
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
@@ -322,7 +321,6 @@ nav#breadcrumb-navigation {
 #restaurant-hours td {
   color: #666;
 }
-
 .card-header {
   display: flex;
   justify-content: space-around;
@@ -331,10 +329,6 @@ nav#breadcrumb-navigation {
   align-items: center;
   border-top-left-radius: 30px;
   margin-bottom: 10px;
-}
-.reviews-author {
-  color: #bbb;
-  font-size: 16pt;
 }
 .reviews-date {
   color: #fff;
@@ -367,7 +361,7 @@ nav#breadcrumb-navigation {
     height: 70vw;
     top: 0;
     position: relative;
-    padding-top: 130px;
+    padding-top: 120px;
   }
   #restaurant-container {
     padding-top: 20px;
@@ -390,7 +384,7 @@ nav#breadcrumb-navigation {
   }
 
   #restaurant-name {
-    font-size: 28px;
+    font-size: 20pt;
   }
   .reviews-author {
     font-size: 20pt;
