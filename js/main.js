@@ -158,6 +158,12 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant, index) => {
+  const neighborhoodSelect = document.querySelector('#neighborhoods-select');
+  neighborhoodSelect.tabIndex = "1";
+
+  const cuisineSelect = document.querySelector('#cuisines-select');
+  cuisineSelect.tabIndex = "2";
+
   const li = document.createElement('li');
 
   const image = document.createElement('img');
@@ -180,7 +186,7 @@ createRestaurantHTML = (restaurant, index) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
-  more.tabindex = index + 1;
+  more.tabIndex = index + 3;
   more.href = DBHelper.urlForRestaurant(restaurant);
   more.title = `Go to ${restaurant.name} detailed view`;
   li.append(more)
