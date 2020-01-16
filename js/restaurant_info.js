@@ -111,7 +111,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h1');
+  const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -137,7 +137,7 @@ createReviewHTML = (review) => {
   const cardHeader = document.createElement('div');
   cardHeader.classList.add('card-header');
 
-  const name = document.createElement('h2');
+  const name = document.createElement('h3');
   name.classList.add('reviews-author');
   name.innerHTML = review.name;
   cardHeader.appendChild(name);
@@ -149,7 +149,7 @@ createReviewHTML = (review) => {
 
   li.appendChild(cardHeader);
 
-  const rating = document.createElement('h3');
+  const rating = document.createElement('h4');
   rating.innerHTML = `Rating: ${review.rating}`;
   rating.classList.add('reviews-rating');
   li.appendChild(rating);

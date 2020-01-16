@@ -71,22 +71,26 @@ section {
   box-sizing: border-box;
 }
 /* ====================== Navigation ====================== */
-nav {
+nav#home {
   width: 100%;
   height: 80px;
   line-height: 80px;
   background-color: #252831;
   text-align: center;
 }
-nav h1 {
+nav#home h1 {
   margin: auto;
 }
-nav h1 a {
+nav#home h1 a {
   color: #fff;
   font-size: 14pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
+}
+nav#breadcrumb-navigation {
+  line-height: 40px;
+  height: 40px;
 }
 #breadcrumb {
   padding: 10px 40px 16px;
@@ -226,10 +230,10 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 78%;
+  height: 75%;
   position: fixed;
   right: 0;
-  top: 132px;
+  top: 122px;
   width: 50%;
   z-index: 0;
 }
@@ -281,7 +285,7 @@ nav h1 a {
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
+  padding: 120px 40px 30px;
   width: 50%;
   box-sizing: border-box;
 }
