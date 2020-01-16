@@ -46,6 +46,8 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+  select.tabIndex = "1";
+
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
@@ -73,6 +75,7 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
+  select.tabIndex = "2";
 
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
@@ -158,12 +161,6 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant, index) => {
-  const neighborhoodSelect = document.querySelector('#neighborhoods-select');
-  neighborhoodSelect.tabIndex = "1";
-
-  const cuisineSelect = document.querySelector('#cuisines-select');
-  cuisineSelect.tabIndex = "2";
-
   const li = document.createElement('li');
 
   const image = document.createElement('img');
